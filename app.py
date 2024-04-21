@@ -44,7 +44,7 @@ def limit_remote_addr():
 @app.route('/', methods=['GET', 'POST'])
 def index():
     form = ImageForm()
-    voice_id = 'Bviom6iVLYrnrbbh3bVY'
+    voice_id = 'bnL3KUAz7oSCelelsCki'
     if form.validate_on_submit():
         
         user_filename = form.user_filename.data.strip()
