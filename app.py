@@ -32,14 +32,6 @@ class ImageForm(FlaskForm):
     photo = FileField('Upload Photo', validators=[FileRequired()])
     user_filename = StringField('Enter Name')
 
-trusted_ips = os.environ.get('trusted_ips')
-
-
-@app.before_request
-def limit_remote_addr():
-    if request.remote_addr not in trusted_ips:
-        print(trusted_ips)
-        abort(404)  # Not Found
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
