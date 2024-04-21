@@ -7,7 +7,7 @@ import google.generativeai as genai
 load_dotenv()
 genapi_key = os.environ.get('genapi_key')
 elevenlabs_key = os.environ.get('elevenlabs_key')
-genai.configure(genapi_key)
+genai.configure(api_key=genapi_key)
 set_api_key(elevenlabs_key)
 
 # Set up the model
